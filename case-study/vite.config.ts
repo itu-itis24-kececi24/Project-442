@@ -4,7 +4,7 @@ import path from 'path';
 import { defineConfig } from 'vite';
 
 export default defineConfig({
-  base: '/case-study/', 
+  base: '/Project-442/case-study/', 
   
   plugins: [
     react(), 
@@ -19,9 +19,5 @@ export default defineConfig({
 
   server: {
     hmr: true,
-    mimeTypes: {
-      '.tsx': 'application/javascript',
-      '.ts': 'application/javascript'
-    }
   },
 });
