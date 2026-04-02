@@ -18,3 +18,4 @@ jobs:
         with:
           folder: case-study/dist # Update path to include case-study prefix
           target-folder: my-app
+          token: ${{ secrets.GITHUB_TOKEN }}
