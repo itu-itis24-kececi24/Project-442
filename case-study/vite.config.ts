@@ -3,21 +3,23 @@ import react from '@vitejs/plugin-react';
 import path from 'path';
 import { defineConfig } from 'vite';
 
-export default defineConfig({
-  base: '/case-study/', 
-  
-  plugins: [
-    react(), 
-    tailwindcss()
-  ],
-  
-  resolve: {
-    alias: {
-      '@': path.resolve(__dirname, '.'),
-    },
-  },
+export default defineConfig(({ mode }) => {
+  return {
+    base: mode === 'local' ? './' : '/case-study/',
 
-  server: {
-    hmr: true,
-  },
+    plugins: [
+      react(),
+      tailwindcss()
+    ],
+
+    resolve: {
+      alias: {
+        '@': path.resolve(__dirname, '.'),
+      },
+    },
+
+    server: {
+      hmr: true,
+    },
+  }
 });
