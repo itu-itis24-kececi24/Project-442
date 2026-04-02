@@ -10,10 +10,11 @@ jobs:
         uses: actions/checkout@v4
       - name: Install and Build
         run: |
+          cd case-study
           npm install
           npm run build
       - name: Deploy to GitHub Pages
         uses: JamesIves/github-pages-deploy-action@v4
         with:
-          folder: dist # The folder Vite outputs
-          target-folder: my-app # This puts the build into the subfolder
+          folder: case-study/dist # Update path to include case-study prefix
+          target-folder: my-app
