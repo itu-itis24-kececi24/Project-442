@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RoboÇoban | The Autonomous Digital Shepherd</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: { sans: ['Inter', 'sans-serif'] },
+                    colors: {
+                        agri: {
+                            50: '#f0fdf4',
+                            100: '#dcfce7',
+                            500: '#22c55e',
+                            600: '#16a34a',
+                            700: '#15803d',
+                            900: '#14532d',
+                        },
+                        tech: {
+                            900: '#0f172a',
+                            950: '#020617',
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        .hero-pattern {
+            background-image: linear-gradient(rgba(2, 6, 23, 0.7), rgba(2, 6, 23, 0.8)), url('https://images.unsplash.com/photo-1484557985045-edf25e08da73?q=80&w=2873&auto=format&fit=crop');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+        }
+        .gradient-text {
+            background: linear-gradient(to right, #4ade80, #3b82f6);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+    </style>
+</head>
+<body class="font-sans text-slate-800 antialiased bg-slate-50">
+
+    <!-- Navigation -->
+    <nav id="navbar" class="fixed w-full z-50 transition-all duration-300 bg-transparent py-4">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center">
+                <div class="flex items-center gap-2">
+                    <div class="bg-agri-500 p-2 rounded-lg">
+                        <i data-lucide="satellite" class="text-white w-6 h-6"></i>
+                    </div>
+                    <span class="text-2xl font-bold text-white tracking-tight">Robo<span class="text-agri-500">Çoban</span></span>
+                </div>
+                <div class="hidden md:flex space-x-8 text-sm font-medium text-white/90">
+                    <a href="#features" class="hover:text-agri-500 transition">System Features</a>
+                    <a href="#benefits" class="hover:text-agri-500 transition">Farm Benefits</a>
+                    <a href="#technology" class="hover:text-agri-500 transition">How it Works</a>
+                    <a href="#pricing" class="hover:text-agri-500 transition">Pricing Plans</a>
+                </div>
+                <div class="hidden md:block">
+                    <a href="#contact" class="bg-agri-600 hover:bg-agri-500 text-white px-6 py-2.5 rounded-full font-semibold transition shadow-lg shadow-agri-500/30">
+                        Request Pilot Demo
+                    </a>
+                </div>
+                <!-- Mobile menu button -->
+                <div class="md:hidden flex items-center">
+                    <button class="text-white hover:text-agri-500">
+                        <i data-lucide="menu" class="w-6 h-6"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="relative hero-pattern h-screen flex items-center">
+        <div class="absolute inset-0 bg-gradient-to-b from-transparent to-tech-950/90"></div>
+        <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center pt-20">
+            <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/10 border border-white/20 text-agri-100 text-sm font-medium mb-8 backdrop-blur-sm">
+                <span class="flex h-2 w-2 rounded-full bg-agri-500 animate-pulse"></span>
+                By Anadolu Mera Teknolojileri
+            </div>
+            <h1 class="text-5xl md:text-7xl font-extrabold text-white tracking-tight mb-6 leading-tight">
+                The Future of <span class="gradient-text">Autonomous Herding</span>
+            </h1>
+            <p class="mt-4 text-xl md:text-2xl text-slate-300 max-w-3xl mx-auto font-light leading-relaxed mb-10">
+                Combat rising labor costs with a fully integrated UAV & UGV digital shepherd. Protect your flock, monitor herd health, and increase grazing efficiency.
+            </p>
+            <div class="flex flex-col sm:flex-row justify-center gap-4">
+                <a href="#contact" class="bg-agri-600 hover:bg-agri-500 text-white px-8 py-4 rounded-full font-bold text-lg transition transform hover:-translate-y-1 shadow-xl shadow-agri-500/20 flex items-center justify-center gap-2">
+                    Join the Pilot Program <i data-lucide="arrow-right" class="w-5 h-5"></i>
+                </a>
+                <a href="#features" class="bg-white/10 hover:bg-white/20 text-white border border-white/30 px-8 py-4 rounded-full font-bold text-lg transition backdrop-blur-md flex items-center justify-center gap-2">
+                    <i data-lucide="play-circle" class="w-5 h-5"></i> Watch Concept Video
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- The Problem / Solution -->
+    <section class="py-24 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+                <div>
+                    <h2 class="text-agri-600 font-bold tracking-wide uppercase text-sm mb-3">The Challenge</h2>
+                    <h3 class="text-3xl md:text-4xl font-bold text-slate-900 mb-6">Traditional shepherding is becoming unsustainable.</h3>
+                    <p class="text-lg text-slate-600 mb-6 leading-relaxed">
+                        With rural populations declining and manual labor costs reaching up to 3-4 times the minimum wage, managing medium to large-scale livestock operations is harder than ever. Simple GPS collars and virtual fences aren't enough to actively manage and protect a moving herd.
+                    </p>
+                    <div class="space-y-4">
+                        <div class="flex items-start gap-4">
+                            <div class="bg-red-100 p-2 rounded text-red-600 mt-1"><i data-lucide="trending-down" class="w-5 h-5"></i></div>
+                            <div>
+                                <h4 class="font-bold text-slate-900">Labor Shortages</h4>
+                                <p class="text-slate-600 text-sm">Finding reliable, affordable human shepherds for 6-8 month grazing periods is a growing bottleneck.</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start gap-4">
+                            <div class="bg-red-100 p-2 rounded text-red-600 mt-1"><i data-lucide="alert-triangle" class="w-5 h-5"></i></div>
+                            <div>
+                                <h4 class="font-bold text-slate-900">Herd Stress & Loss</h4>
+                                <p class="text-slate-600 text-sm">Lack of continuous, analytical monitoring leads to unnoticed animal stress, predator threats, and financial loss.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="relative">
+                    <div class="absolute inset-0 bg-gradient-to-tr from-agri-500 to-blue-500 rounded-3xl transform rotate-3 opacity-20"></div>
+                    <div class="bg-tech-950 rounded-3xl p-8 relative shadow-2xl border border-slate-800">
+                        <h2 class="text-agri-500 font-bold tracking-wide uppercase text-sm mb-3">Our Solution</h2>
+                        <h3 class="text-3xl font-bold text-white mb-6">The RoboÇoban Ecosystem</h3>
+                        <p class="text-slate-300 mb-8 leading-relaxed">
+                            A coordinated framework where aerial and ground vehicles work together as a single unit to provide complete safety and supervision of the herd while grazing.
+                        </p>
+                        <ul class="space-y-4 text-slate-300">
+                            <li class="flex items-center gap-3"><i data-lucide="check-circle-2" class="text-agri-400"></i> Cuts labor expenses by ~50%</li>
+                            <li class="flex items-center gap-3"><i data-lucide="check-circle-2" class="text-agri-400"></i> Prevents animal loss via continuous monitoring</li>
+                            <li class="flex items-center gap-3"><i data-lucide="check-circle-2" class="text-agri-400"></i> Monthly efficiency and herd health ROI reports</li>
+                            <li class="flex items-center gap-3"><i data-lucide="check-circle-2" class="text-agri-400"></i> Scalable for farms of any size</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Key Features (Technology) -->
+    <section id="features" class="py-24 bg-slate-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <h2 class="text-agri-600 font-bold tracking-wide uppercase text-sm mb-3">Powered by Advanced AI</h2>
+                <h3 class="text-3xl md:text-4xl font-bold text-slate-900 mb-4">A Unified Autonomous Platform</h3>
+                <p class="text-lg text-slate-600">We don't just track GPS. We analyze social hierarchy, detect anomalies, and actively guide the herd using military-grade robotics adapted for agriculture.</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <!-- Feature 1 -->
+                <div class="bg-white rounded-2xl p-8 shadow-sm border border-slate-100 hover:shadow-xl hover:-translate-y-1 transition-all duration-300">
+                    <div class="w-14 h-14 bg-blue-50 text-blue-600 rounded-xl flex items-center justify-center mb-6">
+                        <i data-lucide="plane" class="w-7 h-7"></i>
+                    </div>
+                    <h4 class="text-xl font-bold text-slate-900 mb-3">Aerial Surveillance (UAV)</h4>
+                    <p class="text-slate-600 text-sm leading-relaxed">
+                        Our drone scans from above using infrared sensors. It acts as the "eye in the sky," detecting environmental hazards and tracking the herd's overall movement.
+                    </p>
+                </div>
+
+                <!-- Feature 2 -->
+                <div class="bg-white rounded-2xl p-8 shadow-sm border border-slate-100 hover:shadow-xl hover:-translate-y-1 transition-all duration-300">
+                    <div class="w-14 h-14 bg-emerald-50 text-emerald-600 rounded-xl flex items-center justify-center mb-6">
+                        <i data-lucide="truck" class="w-7 h-7"></i>
+                    </div>
+                    <h4 class="text-xl font-bold text-slate-900 mb-3">Ground Rover (UGV)</h4>
+                    <p class="text-slate-600 text-sm leading-relaxed">
+                        Trained with Reinforcement Learning (RL) to navigate rough terrain. It utilizes RT-DETR for precision tracking and active herd deterrence on the ground.
+                    </p>
+                </div>
+
+                <!-- Feature 3 -->
+                <div class="bg-white rounded-2xl p-8 shadow-sm border border-slate-100 hover:shadow-xl hover:-translate-y-1 transition-all duration-300">
+                    <div class="w-14 h-14 bg-purple-50 text-purple-600 rounded-xl flex items-center justify-center mb-6">
+                        <i data-lucide="brain-circuit" class="w-7 h-7"></i>
+                    </div>
+                    <h4 class="text-xl font-bold text-slate-900 mb-3">Behavioral AI</h4>
+                    <p class="text-slate-600 text-sm leading-relaxed">
+                        Convolutional Neural Networks (CNN) analyze herd psychology. We identify leader animals and instantly detect if the flock is under stress or facing a threat.
+                    </p>
+                </div>
+
+                <!-- Feature 4 -->
+                <div class="bg-white rounded-2xl p-8 shadow-sm border border-slate-100 hover:shadow-xl hover:-translate-y-1 transition-all duration-300">
+                    <div class="w-14 h-14 bg-orange-50 text-orange-600 rounded-xl flex items-center justify-center mb-6">
+                        <i data-lucide="smartphone" class="w-7 h-7"></i>
+                    </div>
+                    <h4 class="text-xl font-bold text-slate-900 mb-3">Real-Time Mobile App</h4>
+                    <p class="text-slate-600 text-sm leading-relaxed">
+                        A cross-platform Flutter app synced via Firebase backend. Monitor your herd's status, view stress reports, and control the autonomous fleet from your pocket.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pricing / Business Model -->
+    <section id="pricing" class="py-24 bg-tech-950 text-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <h2 class="text-agri-400 font-bold tracking-wide uppercase text-sm mb-3">Commercial Options</h2>
+                <h3 class="text-3xl md:text-4xl font-bold mb-4">Scalable Plans for Any Farm Size</h3>
+                <p class="text-slate-400 text-lg">Whether you prefer asset ownership or a flexible subscription, our models are designed to cost significantly less than human labor.</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-5xl mx-auto">
+                <!-- HaaS Plan -->
+                <div class="bg-slate-900 rounded-3xl p-8 border border-slate-800 relative overflow-hidden">
+                    <div class="absolute top-0 right-0 bg-agri-500 text-white text-xs font-bold px-4 py-1 rounded-bl-lg uppercase tracking-wider">Most Popular</div>
+                    <h4 class="text-2xl font-bold mb-2">Hardware-as-a-Service</h4>
+                    <p class="text-slate-400 mb-6 text-sm">Lower barrier to entry. Subscription covers equipment access, software, and health reports.</p>
+                    <div class="text-4xl font-extrabold mb-6">₺40,000<span class="text-lg text-slate-500 font-normal"> / month*</span></div>
+                    <ul class="space-y-4 mb-8 text-slate-300">
+                        <li class="flex items-center gap-3"><i data-lucide="check" class="text-agri-400 w-5 h-5"></i> Full UAV & UGV deployment</li>
+                        <li class="flex items-center gap-3"><i data-lucide="check" class="text-agri-400 w-5 h-5"></i> Real-time AI app access</li>
+                        <li class="flex items-center gap-3"><i data-lucide="check" class="text-agri-400 w-5 h-5"></i> Proactive remote troubleshooting</li>
+                        <li class="flex items-center gap-3"><i data-lucide="check" class="text-agri-400 w-5 h-5"></i> Monthly efficiency reports</li>
+                    </ul>
+                    <a href="#contact" class="block w-full text-center bg-agri-600 hover:bg-agri-500 text-white font-bold py-3 rounded-xl transition">Apply for Pilot Deployment</a>
+                    <p class="text-xs text-slate-500 mt-4 text-center">*Estimated pricing based on approx. 50% of typical shepherd wages.</p>
+                </div>
+
+                <!-- Direct Purchase Plan -->
+                <div class="bg-slate-900 rounded-3xl p-8 border border-slate-800">
+                    <h4 class="text-2xl font-bold mb-2">Direct Unit Purchase</h4>
+                    <p class="text-slate-400 mb-6 text-sm">For operators preferring full asset ownership and long-term capital investment.</p>
+                    <div class="text-4xl font-extrabold mb-6">~₺700,000<span class="text-lg text-slate-500 font-normal"> / system*</span></div>
+                    <ul class="space-y-4 mb-8 text-slate-300">
+                        <li class="flex items-center gap-3"><i data-lucide="check" class="text-agri-400 w-5 h-5"></i> Own the UAV & UGV hardware</li>
+                        <li class="flex items-center gap-3"><i data-lucide="check" class="text-agri-400 w-5 h-5"></i> Initial farm setup & staff training</li>
+                        <li class="flex items-center gap-3"><i data-lucide="check" class="text-agri-400 w-5 h-5"></i> Paid maintenance service intervals</li>
+                        <li class="flex items-center gap-3"><i data-lucide="check" class="text-agri-400 w-5 h-5"></i> Standard software access</li>
+                    </ul>
+                    <a href="#contact" class="block w-full text-center bg-slate-800 hover:bg-slate-700 text-white font-bold py-3 rounded-xl transition border border-slate-700">Contact Sales Team</a>
+                     <p class="text-xs text-slate-500 mt-4 text-center">*Target selling price. Custom quotes available based on farm size.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact / CTA -->
+    <section id="contact" class="py-24 bg-agri-600 relative overflow-hidden">
+        <!-- Abstract background elements -->
+        <div class="absolute top-0 right-0 -translate-y-12 translate-x-1/3">
+            <svg width="404" height="404" fill="none" viewBox="0 0 404 404" aria-hidden="true" class="opacity-20"><defs><pattern id="85737c0e-0916-41d7-917f-596dc7edfa27" x="0" y="0" width="20" height="20" patternUnits="userSpaceOnUse"><rect x="0" y="0" width="4" height="4" fill="currentColor"></rect></pattern></defs><rect width="404" height="404" fill="url(#85737c0e-0916-41d7-917f-596dc7edfa27)"></rect></svg>
+        </div>
+        
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
+            <h2 class="text-3xl md:text-5xl font-extrabold text-white mb-6">Ready to modernize your farm?</h2>
+            <p class="text-agri-100 text-xl mb-10 max-w-2xl mx-auto">
+                We are currently accepting applications from medium to large-scale flock owners for our initial subsidized pilot deployments.
+            </p>
+            <div class="bg-white rounded-2xl p-8 shadow-2xl max-w-lg mx-auto text-left">
+                <form class="space-y-4" onsubmit="event.preventDefault(); alert('Thank you for your interest! The Anadolu Mera Teknolojileri team will contact you shortly regarding pilot availability.');">
+                    <div>
+                        <label class="block text-sm font-medium text-slate-700 mb-1">Full Name / Farm Name</label>
+                        <input type="text" class="w-full px-4 py-2 border border-slate-300 rounded-lg focus:ring-2 focus:ring-agri-500 focus:border-agri-500 outline-none transition" required>
+                    </div>
+                    <div>
+                        <label class="block text-sm font-medium text-slate-700 mb-1">Email Address</label>
+                        <input type="email" class="w-full px-4 py-2 border border-slate-300 rounded-lg focus:ring-2 focus:ring-agri-500 focus:border-agri-500 outline-none transition" required>
+                    </div>
+                    <div>
+                        <label class="block text-sm font-medium text-slate-700 mb-1">Approximate Flock Size</label>
+                        <select class="w-full px-4 py-2 border border-slate-300 rounded-lg focus:ring-2 focus:ring-agri-500 focus:border-agri-500 outline-none transition">
+                            <option>Less than 500</option>
+                            <option>500 - 1,000</option>
+                            <option>1,000 - 5,000</option>
+                            <option>5,000+</option>
+                        </select>
+                    </div>
+                    <button type="submit" class="w-full bg-tech-900 hover:bg-tech-950 text-white font-bold py-3 rounded-lg transition mt-4">Submit Pilot Application</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-tech-950 text-slate-400 py-12 border-t border-slate-900">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid grid-cols-1 md:grid-cols-4 gap-8">
+            <div class="col-span-1 md:col-span-2">
+                <div class="flex items-center gap-2 mb-4">
+                    <div class="bg-agri-500 p-1.5 rounded-lg">
+                        <i data-lucide="satellite" class="text-white w-5 h-5"></i>
+                    </div>
+                    <span class="text-xl font-bold text-white tracking-tight">Robo<span class="text-agri-500">Çoban</span></span>
+                </div>
+                <p class="text-sm leading-relaxed mb-4 max-w-sm">
+                    Developed by Anadolu Mera Teknolojileri. Transforming conventional herding methods into AI-based autonomous systems to secure the future of agriculture.
+                </p>
+                <div class="flex gap-4">
+                    <a href="#" class="hover:text-white transition"><i data-lucide="linkedin" class="w-5 h-5"></i></a>
+                    <a href="#" class="hover:text-white transition"><i data-lucide="twitter" class="w-5 h-5"></i></a>
+                    <a href="#" class="hover:text-white transition"><i data-lucide="mail" class="w-5 h-5"></i></a>
+                </div>
+            </div>
+            
+            <div>
+                <h4 class="text-white font-bold mb-4 uppercase text-sm tracking-wider">Technology</h4>
+                <ul class="space-y-2 text-sm">
+                    <li><a href="#" class="hover:text-agri-400 transition">UAV Systems</a></li>
+                    <li><a href="#" class="hover:text-agri-400 transition">UGV Navigation (RL)</a></li>
+                    <li><a href="#" class="hover:text-agri-400 transition">CNN Behavioral Analysis</a></li>
+                    <li><a href="#" class="hover:text-agri-400 transition">Mobile Application</a></li>
+                </ul>
+            </div>
+
+            <div>
+                <h4 class="text-white font-bold mb-4 uppercase text-sm tracking-wider">Collaborators</h4>
+                <ul class="space-y-2 text-sm">
+                    <li><a href="#" class="hover:text-agri-400 transition">HAVELSAN</a></li>
+                    <li><a href="#" class="hover:text-agri-400 transition">Doktar (İTÜ ARI)</a></li>
+                    <li><a href="#" class="hover:text-agri-400 transition">Anadolu Meraları</a></li>
+                    <li><a href="#" class="hover:text-agri-400 transition">TÜBİTAK Supported</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mt-12 pt-8 border-t border-slate-800 text-sm text-center">
+            <p>&copy; 2026 Anadolu Mera Teknolojileri. All rights reserved. Designed for precision livestock farming.</p>
+        </div>
+    </footer>
+
+    <script>
+        // Initialize Icons
+        lucide.createIcons();
+
+        // Navbar scroll effect
+        window.addEventListener('scroll', () => {
+            const nav = document.getElementById('navbar');
+            if (window.scrollY > 20) {
+                nav.classList.add('bg-tech-950/95', 'backdrop-blur-md', 'shadow-lg');
+                nav.classList.remove('bg-transparent');
+            } else {
+                nav.classList.remove('bg-tech-950/95', 'backdrop-blur-md', 'shadow-lg');
+                nav.classList.add('bg-transparent');
+            }
+        });
+    </script>
+</body>
+</html>
