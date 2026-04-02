@@ -19,5 +19,9 @@ export default defineConfig({
 
   server: {
     hmr: true,
+    mimeTypes: {
+      '.tsx': 'application/javascript',
+      '.ts': 'application/javascript'
+    }
   },
 });
