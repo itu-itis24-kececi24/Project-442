@@ -16,6 +16,6 @@ jobs:
       - name: Deploy to GitHub Pages
         uses: JamesIves/github-pages-deploy-action@v4
         with:
-          folder: case-study/dist # Update path to include case-study prefix
-          target-folder: my-app
+          folder: case-study/dist
+          target-folder: case-study  # ← Match your vite base path
           token: ${{ secrets.GITHUB_TOKEN }}
